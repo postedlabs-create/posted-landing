@@ -95,6 +95,31 @@
     color: var(--blue-bright);
   }
 
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-login {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border: 1px solid var(--border-hover);
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .nav-login:hover { border-color: var(--blue-border); color: var(--blue-bright); transform: translateY(-1px); }
+
   .nav-cta {
     display: inline-flex;
     align-items: center;
@@ -721,7 +746,10 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">POSTED<span>.</span></a>
-  <a href="#waitlist" class="nav-cta">Join Waitlist →</a>
+  <div class="nav-actions">
+    <a href="/login" class="nav-login">Log In</a>
+    <a href="#waitlist" class="nav-cta">Join Waitlist →</a>
+  </div>
 </nav>
 
 <!-- HERO -->
